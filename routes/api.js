@@ -12,6 +12,14 @@ router.get("/api/workouts", async (req, res) => {
 
 });
 
+router.post("/api/workouts",function (req,res){    
+    Workout.create({})
+    .then(data => res.json(data))
+    .catch(err => { 
+        res.json(err)
+    })
+});
+
 
 
 module.exports = router;
